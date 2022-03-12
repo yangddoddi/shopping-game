@@ -1,12 +1,11 @@
 "use strict";
 
 const btnList = document.querySelector(".buttonList");
-const btnListitem = document.querySelectorAll(".buttonList__btn");
+const btnListItem = document.querySelectorAll(".buttonList__btn");
 
 const clothesList = document.querySelector(".clothesList");
-
 const clothesItemHTML = `<li class="clothesList_item" data-color="blue" data-type="tshirts">
-<img class="clothesList_item_img" src="/img/blue_p.png" alt="">
+<img class="clothesList_item_img" src="./img/blue_p.png" alt="">
 <p class="clothesList_item_sex" data-sex="male">female</p>
 <p class="clothesList_item_size" data-size="large">Lagrge size</p>
 </li>`;
@@ -49,7 +48,7 @@ fetch("data/data.json")
     });
   })
   .then(() => {
-    btnListitem.forEach((btn) => {
+    btnListItem.forEach((btn) => {
       const clothesListItem = document.querySelectorAll(".clothesList_item");
       btn.addEventListener("click", () => {
         clothesListItem.forEach((target) => {
